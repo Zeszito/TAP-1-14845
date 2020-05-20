@@ -46,7 +46,7 @@
 			struct v2f
 			{
 				float4 p : SV_POSITION;
-				half3 n : NORMAL; /* Neste caso estava a ser usado um float2 para um valor com 3 coordenadas */
+				half3 n : NORMAL; /* Neste caso estava a ser usado um float2 para um valor com 3 coordenadas, o que impedia o fragment shader de usar a componente z da normal */
 				half2 u : TEXCOORD0; /* Para além disso, tanto a normal como os uvs podem ser halfs, diminuindo a capacidade de processamento */
 			};
 
